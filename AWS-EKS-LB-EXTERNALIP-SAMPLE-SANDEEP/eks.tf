@@ -3,7 +3,7 @@ module "eks" {
   version = "18.29.0"
 
   cluster_name                    = var.NAME
-  cluster_version                 = "1.22"
+  cluster_version                 = "1.23"
   vpc_id                          = module.vpc.vpc_id
   subnet_ids                      = module.vpc.private_subnets
   node_security_group_id          = module.sg.security_group_id
