@@ -4,7 +4,8 @@
  */
 
 data "external" "thumbprint" {
-  program ="${["./06-controlplane-oidc-provider-thumbprint.sh", data.aws_region.current.name]}"
+  PATH =["./06-controlplane-oidc-provider-thumbprint.sh", data.aws_region.current.name]
+  program = []
 }
 resource "aws_iam_openid_connect_provider" "EksControlPlane" {
   client_id_list  = ["sts.amazonaws.com"]
